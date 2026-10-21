@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "Deterministic code intelligence for TypeScript codebases: a map of what your code actually does. Pre-release.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "author": "Bilal Mahmud",
   "repository": { "type": "git", "url": "git+https://github.com/verumap/verumap.git" },
   "homepage": "https://github.com/verumap/verumap",

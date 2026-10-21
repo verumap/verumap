@@ -30,4 +30,4 @@ Built by [Bilal Mahmud](https://github.com/BilalMahmud12).
 
 ## License
 
-[MIT](LICENSE)
+[Apache-2.0](LICENSE)
