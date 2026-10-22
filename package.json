@@ -2,10 +2,57 @@
   "name": "verumap",
   "version": "0.0.1",
   "private": true,
-  "description": "Deterministic code intelligence for TypeScript codebases: a map of what your code actually does. Pre-release.",
+  "description": "Deterministic code intelligence for TypeScript codebases. Pre-release.",
   "license": "Apache-2.0",
   "author": "Bilal Mahmud",
-  "repository": { "type": "git", "url": "git+https://github.com/verumap/verumap.git" },
+  "type": "module",
+  "bin": {
+    "verumap": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "bun src/cli.ts",
+    "test": "bun test",
+    "lint": "biome check src test",
+    "prepack": "bun run build",
+    "format": "biome check --write src test",
+    "ship": "bash .local/ship.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p test/tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verumap/verumap.git"
+  },
   "homepage": "https://github.com/verumap/verumap",
-  "keywords": ["typescript", "static-analysis", "code-intelligence", "architecture"]
+  "keywords": [
+    "typescript",
+    "javascript",
+    "static-analysis",
+    "code-intelligence",
+    "architecture"
+  ],
+  "dependencies": {
+    "typescript": "^6"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.2",
+    "@types/bun": "^1.4.3",
+    "@types/node": "24"
+  },
+  "packageManager": "bun@1.4.3"
 }
