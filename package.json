@@ -1,6 +1,6 @@
 {
   "name": "verumap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "Deterministic code intelligence for TypeScript codebases. Pre-release.",
   "license": "Apache-2.0",
@@ -19,7 +19,8 @@
   },
   "files": [
     "dist",
-    "NOTICE"
+    "NOTICE",
+    "src"
   ],
   "engines": {
     "node": ">=22"
